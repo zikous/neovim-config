@@ -68,9 +68,6 @@ vim.keymap.set("n", "<leader>lg", Snacks.lazygit.open)
 
 -- LSP
 vim.lsp.config("lua_ls", { settings = { Lua = { diagnostics = { globals = { "vim", "Snacks" } } } } })
-vim.lsp.config("*", {
-    capabilities = { textDocument = { completion = { completionItem = { snippetSupport = false } } } },
-})
 vim.lsp.enable({ "lua_ls", "rust_analyzer", "pyright", "clangd", "ts_ls", "bashls" })
 
 -- Diagnostics
