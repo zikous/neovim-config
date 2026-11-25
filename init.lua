@@ -115,6 +115,7 @@ vim.keymap.set("n", "S", "<Plug>(leap-from-window)")
 
 -- Format
 require("conform").setup({
+    default_format_opts = { lsp_format = "fallback" },
     formatters_by_ft = {
         python = { "ruff_format" },
         javascript = { "prettier" },
