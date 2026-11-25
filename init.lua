@@ -133,3 +133,6 @@ vim.api.nvim_create_autocmd("FileType", {
         pcall(vim.treesitter.start)
     end,
 })
+
+-- Terminal
+vim.keymap.set("t", "<Esc><Esc>", [[<C-\><C-n>]])
