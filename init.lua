@@ -134,8 +134,5 @@ vim.api.nvim_create_autocmd("FileType", {
     end,
 })
 
--- Windows
-vim.keymap.set("n", "<leader>w", "<C-w>")
-
 -- Terminal
 vim.keymap.set("t", "<Esc><Esc>", [[<C-\><C-n>]])
