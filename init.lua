@@ -88,6 +88,12 @@ require("tiny-inline-diagnostic").setup({
         multilines = { enabled = true },
     },
 })
+vim.keymap.set("n", "<leader>dn", function()
+    vim.diagnostic.jump({ count = 1 })
+end)
+vim.keymap.set("n", "<leader>dp", function()
+    vim.diagnostic.jump({ count = -1 })
+end)
 
 -- Completion
 local cmp = require("blink.cmp")
@@ -136,3 +142,6 @@ vim.api.nvim_create_autocmd("FileType", {
 
 -- Terminal
 vim.keymap.set("t", "<Esc><Esc>", [[<C-\><C-n>]])
+
+-- Search
+vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<cr>")
